@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090307">
+<title>30 dias com você ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+:root{--red:#ff1744;--hot:#ff3158;--deep:#650019;--ink:#090307}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 38%,#310813 0%,#16050c 38%,#090307 76%);color:#fff;font-family:Inter, sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(rgba(255,23,68,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,23,68,.08) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:-1}
+body:after{content:"";position:fixed;inset:-30%;pointer-events:none;background:conic-gradient(from 0deg,transparent 0 78%,rgba(255,23,68,.07) 83%,transparent 88%);animation:rotate 28s linear infinite;z-index:-1}
+@keyframes rotate{to{transform:rotate(360deg)}}
+.wrap{width:min(100% - 36px,1000px);margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 0;color:#ff9bab;font:500 10px Orbitron,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.mark{display:flex;align-items:center;gap:10px}.dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 14px var(--red);animation:blink 1.5s infinite}
+@keyframes blink{50%{opacity:.35;box-shadow:0 0 3px var(--red)}}
+.topline{opacity:.65}
+main{text-align:center;padding:clamp(42px,9vh,100px) 0 80px}
+.eyebrow{color:#ff7189;font:500 11px Orbitron,sans-serif;letter-spacing:.35em;text-transform:uppercase}
+h1{font:700 clamp(35px,7vw,76px)/1.12 Orbitron,sans-serif;letter-spacing:-.055em;margin:22px 0 12px;text-shadow:0 0 28px #ff174455}
+h1 span{display:block;color:var(--red);text-shadow:0 0 12px #ff1744,0 0 42px #ff174488}
+.subtitle{color:#d6b8bf;font-size:clamp(14px,2vw,17px);font-weight:300;letter-spacing:.06em}
+.heart-stage{height:260px;display:grid;place-items:center;position:relative;margin:30px auto 15px}
+.orbit{position:absolute;width:230px;height:230px;border:1px solid #ff174433;border-radius:50%;box-shadow:0 0 50px #ff17440d,inset 0 0 35px #ff17440a}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:18px;border:1px dashed #ff174455;border-radius:50%;animation:rotate 18s linear infinite}
+.orbit:after{inset:-14px;border:1px solid #ff17441c;animation-direction:reverse;animation-duration:30s}
+.heart{font-size:108px;line-height:1;filter:drop-shadow(0 0 12px #ff1744) drop-shadow(0 0 36px #ff174477);animation:heartbeat 1.15s ease-in-out infinite;position:relative}
+@keyframes heartbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.13)}24%{transform:scale(1)}38%{transform:scale(1.08)}52%{transform:scale(1)}}
+.counter{width:min(100%,760px);margin:35px auto 0;padding:26px 22px 22px;border:1px solid #ff31583d;border-radius:18px;background:linear-gradient(135deg,#ff17440d,#19070d99);box-shadow:0 0 50px #ff17440d,inset 0 0 35px #ff174408;position:relative;overflow:hidden}
+.counter:before{content:"";position:absolute;left:0;top:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,#ff3158,transparent);animation:scan 4s linear infinite}
+@keyframes scan{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.counter-label{font:500 10px Orbitron,sans-serif;letter-spacing:.24em;color:#ff8b9e;text-transform:uppercase;margin-bottom:19px}
+.time{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.unit strong{display:block;font:600 clamp(27px,5vw,46px) Orbitron,sans-serif;color:#fff;text-shadow:0 0 18px #ff174477;font-variant-numeric:tabular-nums}
+.unit small{display:block;color:#bb8994;font:400 9px Orbitron,sans-serif;letter-spacing:.18em;text-transform:uppercase;margin-top:9px}
+.milliseconds{margin-top:16px;color:#ff7189;font:400 11px Orbitron,sans-serif;letter-spacing:.16em;font-variant-numeric:tabular-nums}
+.message{max-width:660px;margin:72px auto 0}
+.message .eyebrow{font-size:10px}
+.message h2{font:500 clamp(22px,4vw,34px) Orbitron,sans-serif;margin:17px 0 20px}
+.message p{color:#dfcbd0;font-size:clamp(15px,2vw,17px);font-weight:300;line-height:1.9;margin:0}
+.message p em{font-style:normal;color:#ff8297;font-weight:500}
+.quote{margin:38px auto 0;color:#ff91a3;font:400 12px Orbitron,sans-serif;letter-spacing:.12em}
+footer{padding:0 0 32px;text-align:center;color:#78525c;font:400 9px Orbitron,sans-serif;letter-spacing:.18em}
+footer span{color:#ff3158}
+@media(max-width:480px){header{font-size:8px}.heart-stage{height:220px}.orbit{width:190px;height:190px}.heart{font-size:88px}.counter{padding:22px 10px}.unit small{font-size:7px;letter-spacing:.1em}.time{gap:2px}.milliseconds{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="mark"><i class="dot"></i> conexão especial</div><div class="topline">30.08.2026 — ∞</div></header>
+<main>
+<div class="eyebrow">um mês de uma história que começou</div>
+<h1>30 dias <span>com você</span></h1>
+<div class="subtitle">E que eu espero que seja só o começo.</div>
+<div class="heart-stage" aria-label="Coração pulsando"><div class="orbit"></div><div class="heart">♥</div></div>
+<section class="counter" aria-label="Tempo desde o início das conversas">
+<div class="counter-label">Desde a nossa primeira conversa</div>
+<div class="time">
+<div class="unit"><strong id="days">00</strong><small>Dias</small></div>
+<div class="unit"><strong id="hours">00</strong><small>Horas</small></div>
+<div class="unit"><strong id="minutes">00</strong><small>Minutos</small></div>
+<div class="unit"><strong id="seconds">00</strong><small>Segundos</small></div>
+</div>
+<div class="milliseconds" id="since">30 AGO 2026 · 00:00:00</div>
+</section>
+<section class="message">
+<div class="eyebrow">para alguém especial</div>
+<h2>Os 30 dias mais alegres.</h2>
+<p>Desde que começamos a conversar, meus dias ganharam um brilho diferente. Você é uma pessoa <em>incrível, cativante, cuidadosa, inteligente e linda</em>. Seu jeito, sua atenção e a forma como você enxerga as coisas tornam cada conversa especial. Talvez um mês pareça pouco tempo, mas foi o suficiente para perceber o quanto é bom ter você por perto. Obrigado por fazer esses dias tão felizes. ❤️</p>
+<div class="quote">VOCÊ FAZ MEU MUNDO BRILHAR <span>✦</span></div>
+</section>
+</main>
+<footer>FEITO COM CARINHO <span>♥</span> 30 · 09 · 2026</footer>
+</div>
+<script>
+const start = new Date(2026, 7, 30, 0, 0, 0); // 30 de agosto, horário local
+const $ = id => document.getElementById(id);
+const pad = n => String(n).padStart(2,'0');
+function update(){
+  const now = new Date();
+  let diff = Math.max(0, now - start);
+  const days = Math.floor(diff / 86400000); diff %= 86400000;
+  const hours = Math.floor(diff / 3600000); diff %= 3600000;
+  const minutes = Math.floor(diff / 60000); diff %= 60000;
+  const seconds = Math.floor(diff / 1000);
+  $('days').textContent = pad(days);
+  $('hours').textContent = pad(hours);
+  $('minutes').textContent = pad(minutes);
+  $('seconds').textContent = pad(seconds);
+  $('since').textContent = 'DESDE 30 AGO 2026 · ' + new Intl.DateTimeFormat('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(start);
+}
+update(); setInterval(update,1000);
+</script>
+</body>
+</html>
